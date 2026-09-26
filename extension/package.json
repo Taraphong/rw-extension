@@ -1,0 +1,32 @@
+{
+  "name": "rusted-warfare-mod-tools",
+  "displayName": "Rusted Warfare Mod Tools",
+  "description": "Syntax highlighting and autocomplete for Rusted Warfare unit .ini mods.",
+  "version": "1.0.0",
+  "publisher": "community",
+  "engines": { "vscode": ">=1.80.0" },
+  "categories": ["Programming Languages"],
+  "activationEvents": ["onLanguage:rusted-warfare-ini"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "rustedWarfare.previewUnitStructure",
+      "title": "Rusted Warfare: Preview Unit Structure"
+    }],
+    "languages": [{
+      "id": "rusted-warfare-ini",
+      "aliases": ["Rusted Warfare INI", "Rusted Warfare"],
+      "extensions": [".ini"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "rusted-warfare-ini",
+      "scopeName": "source.rusted-warfare-ini",
+      "path": "./syntaxes/rusted-warfare-ini.tmLanguage.json"
+    }],
+    "snippets": [{
+      "language": "rusted-warfare-ini",
+      "path": "./snippets/rusted-warfare.json"
+    }]
+  }
+}

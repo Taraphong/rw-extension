@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="rusted-warfare-mod-tools" Version="1.0.0" Publisher="community" />
+    <DisplayName>Rusted Warfare Mod Tools</DisplayName>
+    <Description xml:space="preserve">Syntax highlighting and autocomplete for Rusted Warfare unit .ini mods.</Description>
+    <Tags>rusted-warfare,modding,ini</Tags>
+    <Categories>Programming Languages</Categories>
+  </Metadata>
+  <Installation AllUsers="false" Scope="Global" />
+  <Dependencies />
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" />
+  </Assets>
+</PackageManifest>

@@ -1,0 +1,57 @@
+{
+  "Basic unit": {
+    "prefix": "rw-unit",
+    "description": "Required skeleton for a Rusted Warfare unit",
+    "body": [
+      "[core]",
+      "name: ${1:customUnit}",
+      "mass: ${2:3000}",
+      "radius: ${3:20}",
+      "price: ${4:500}",
+      "maxHp: ${5:200}",
+      "",
+      "[graphics]",
+      "image: ${6:unit.png}",
+      "",
+      "[attack]",
+      "canAttack: ${7:true}",
+      "canAttackFlyingUnits: ${8:true}",
+      "canAttackLandUnits: ${9:true}",
+      "canAttackUnderwaterUnits: ${10:false}",
+      "",
+      "[movement]",
+      "movementType: ${11:LAND}",
+      "moveSpeed: ${12:1.0}",
+      "${0}"
+    ]
+  },
+  "Turret and projectile": {
+    "prefix": "rw-weapon",
+    "description": "Add a turret and projectile to the current unit",
+    "body": [
+      "[turret_${1:main}]",
+      "x: ${2:0}",
+      "y: ${3:0}",
+      "projectile: ${4:shell}",
+      "shoot_sound: ${5:missile_fire}",
+      "delay: ${6:30}",
+      "",
+      "[projectile_${4:shell}]",
+      "directDamage: ${7:50}",
+      "speed: ${8:5}",
+      "life: ${9:60}",
+      "targetGround: ${10:false}",
+      "${0}"
+    ]
+  },
+  "Named section": {
+    "prefix": "rw-section",
+    "description": "Create a named Rusted Warfare section",
+    "body": ["[${1:action}_${2:name}]", "${0}"]
+  },
+  "Comment": {
+    "prefix": "rw-note",
+    "description": "Add a modding note",
+    "body": ["# ${1:Explain what this section does}", "${0}"]
+  }
+}

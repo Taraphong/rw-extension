@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Rusted Warfare INI",
+  "scopeName": "source.rusted-warfare-ini",
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#section" },
+    { "include": "#key" },
+    { "include": "#boolean" },
+    { "include": "#number" },
+    { "include": "#variable" },
+    { "include": "#string" }
+  ],
+  "repository": {
+    "comment": { "patterns": [{ "match": "#.*$", "name": "comment.line.number-sign.rusted-warfare" }] },
+    "section": { "match": "^\\s*(\\[)([A-Za-z_][A-Za-z0-9_]*)(\\])", "captures": { "1": { "name": "punctuation.definition.section.begin.rusted-warfare" }, "2": { "name": "entity.name.section.rusted-warfare" }, "3": { "name": "punctuation.definition.section.end.rusted-warfare" } } },
+    "key": { "match": "^\\s*([A-Za-z_][A-Za-z0-9_]*)(\\s*)(:)(?=\\s|$)", "captures": { "1": { "name": "support.type.property-name.rusted-warfare" }, "3": { "name": "punctuation.separator.key-value.rusted-warfare" } } },
+    "boolean": { "match": "\\b(true|false)\\b", "name": "constant.language.boolean.rusted-warfare" },
+    "number": { "match": "(?<![A-Za-z_])[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)(?:s|%|f)?\\b", "name": "constant.numeric.rusted-warfare" },
+    "variable": { "match": "\\b(?:ROOT|self|this|parent|memory|global|team|unit|${[A-Za-z_][A-Za-z0-9_]*})\\b", "name": "variable.language.rusted-warfare" },
+    "string": { "match": "(?<=:\\s).+", "name": "string.unquoted.rusted-warfare" }
+  }
+}
